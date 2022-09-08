@@ -1,0 +1,45 @@
+.container {
+    background-color: aqua;
+    width: 600px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "aa bb cc dd";
+}
+
+.kk {
+    color: beige;
+    background-color: black;
+    width: 60px;
+    height: 40px;
+}
+
+.k1 {
+    grid-area: aa;
+}
+.k2 {
+    grid-area: bb;
+}
+.k3 {
+    grid-area: cc;
+}
+.k4 {
+    grid-area: dd;
+}
+
+@media only screen and (max-width: 480px) and (min-width: 0px) {
+    .container {
+        width: 100%;
+        grid-template-areas: "aa bb";
+    }
+
+    .k3 {
+        display: none;
+    }
+    .k4 {
+        display: none;
+    }
+}
+
+
